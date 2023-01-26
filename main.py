@@ -1,9 +1,12 @@
-class Person:
-    def __init__(self, name) -> None:
-        self.name = name
+def greet(fx):
+    def func(*args, **kwargs):
+        print("Good morning")
+        print(fx(*args, **kwargs))
+        print("Thank you for using this fxn")
+    return func
 
-    def info(self):
-        print(f"My name is {self.name}")
+@greet
+def add(a,b):
+    return a+b
 
-a = Person("Saksham")
-a.info()
+add(3,4) 
