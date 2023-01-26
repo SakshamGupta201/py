@@ -1,12 +1,11 @@
-with open("myfile.txt", 'r') as f:
-    while (True):
-        line = f.readline()
-        if not line:
-            break
-        marks = line.split(',')
-        m1 = marks[0]
-        m2 = marks[1]
-        m3 = marks[2].replace("\n",'')
-        print(f"Marks of student1 in Math {m1}")
-        print(f"Marks of student1 in Science {m2}")
-        print(f"Marks of student1 in SST {m3}")
+from functools import reduce
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+newlist = list(map(lambda x: x*x*x, my_list))
+print("Map: ", newlist)
+
+filtered_list = list(filter(lambda x: x > 2, my_list))
+print("Filterd List: ", filtered_list)
+
+
+print("Reduce: ", reduce(lambda x, y: x+y, my_list))
