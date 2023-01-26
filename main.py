@@ -1,11 +1,9 @@
-from functools import reduce
-my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+class Person:
+    def __init__(self, name) -> None:
+        self.name = name
 
-newlist = list(map(lambda x: x*x*x, my_list))
-print("Map: ", newlist)
+    def info(self):
+        print(f"My name is {self.name}")
 
-filtered_list = list(filter(lambda x: x > 2, my_list))
-print("Filterd List: ", filtered_list)
-
-
-print("Reduce: ", reduce(lambda x, y: x+y, my_list))
+a = Person("Saksham")
+a.info()
