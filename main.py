@@ -1,19 +1,20 @@
-class MyClass:
-    def __init__(self, value) -> None:
-        self._value = value
+class Employee:
+    no_of_leaves = 8
 
-    def show(self):
-        print(self._value)
-    
-    @property
-    def ten_value(self):
-        return 10 * self._value
-    
-    @ten_value.setter
-    def ten_value(self, new_value):
-        self._value = new_value/10
+    def __init__(self) -> None:
+        pass
+
+    @classmethod
+    def changeLeaves(cls, leaves):
+        cls.no_of_leaves = leaves
+
+    def printLeaves(self):
+        print(self.no_of_leaves)
 
 
-a = MyClass(34)
-a._value = 67
-a.show()
+emp = Employee()
+emp.printLeaves()
+emp.changeLeaves(23)
+emp.printLeaves()
+
+
